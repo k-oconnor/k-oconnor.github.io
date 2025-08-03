@@ -1,0 +1,13 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Subtle gradient */
+}
+.site-header {
+  background: #007bff;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.site-title, .site-nav a { color: white !important; }
+.post-link, .page-link { transition: color 0.3s; }
+.post-link:hover, .page-link:hover { color: #ff4500; }

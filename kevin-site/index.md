@@ -3,12 +3,14 @@ layout: default
 title: Home
 ---
 
-# Welcome
-
-Hi, I'm **Kevin O'Connor**. I'm a researcher, data scientist, and aspiring philosopher-engineer. This is my personal site. 
-
-{% include brain-mind-map.html%}
-
+---
+layout: default
+---
+<header style="background: url('/assets/images/hero-bg.jpg') center/cover; padding: 50px; text-align: center; color: white;">
+  <h1>Welcome to Kevin's World</h1>
+  <p>Developer | Creator | Thinker</p>
+</header>
+{% include brain-mind-map.html %}
 ---
 
 # Personal Philosophy
