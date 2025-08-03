@@ -1,10 +1,5 @@
 ---
 layout: default
-title: Home
----
-
----
-layout: default
 title: Welcome to Kevin's World
 ---
 <header class="hero">
@@ -29,7 +24,6 @@ My work aims to cut through the noise, confront the unknown, and offer clarity. 
 # Hobbies, Interests, Passions
 
 - Symbolic AI & neurosymbolic architectures  
-- Open-ended systems & emergence  
 - Philosophy of intelligence & consciousness  
 - Music theory and acoustic guitar  
 - Sci-fi & speculative futures  
@@ -39,9 +33,8 @@ My work aims to cut through the noise, confront the unknown, and offer clarity. 
 
 # Projects
 
-**Neural Reasoning Networks (NRN):** A PyTorch framework for hybrid symbolic-neural modeling.  
+
 **RNRNDragon:** Causal inference with integrated TMLE and symbolic regularization.  
-**Spiral Simulation:** Symbolic agents, memory-limited meaning, and emergent cognition.  
 **GrammarNet:** Inducing logic rules from ARC-style matrix transformations.
 
 ---
@@ -51,14 +44,6 @@ My work aims to cut through the noise, confront the unknown, and offer clarity. 
 **Tinuiti — Manager, Econometrics**  
 Built Bayesian attribution models and led cross-channel experimentation.  
 2023–2025
-
-**Centaur Institute — Research Fellow**  
-Keynote speaker, neurosymbolic systems. Pushed early work into causal neuro-symbolism.  
-2024–present
-
-**Private Sector — Econometrician**  
-Modeling, experimentation, business impact.  
-2021–2023
 
 ---
 

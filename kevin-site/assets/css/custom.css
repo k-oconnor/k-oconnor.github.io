@@ -12,13 +12,12 @@
 .hero-content h1 {
   font-size: 2.5em;
   margin: 0;
-  font-family: 'Orbitron', sans-serif; /* Cyberpunk font */
+  font-family: 'Orbitron', sans-serif;
 }
 .hero-content .subtitle {
   font-size: 1.2em;
   margin-top: 10px;
 }
-/* Cyberpunk neon effect */
 .hero::before {
   content: '';
   position: absolute;
@@ -30,7 +29,11 @@
   opacity: 0.1;
   animation: neonGlow 5s infinite;
 }
-
+@keyframes neonGlow {
+  0% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.1; }
+}
 .site-header {
   background: #1a1a1a;
   color: #00f0ff;
@@ -48,9 +51,4 @@
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
-}
-@keyframes neonGlow {
-  0% { opacity: 0.1; }
-  50% { opacity: 0.3; }
-  100% { opacity: 0.1; }
 }
