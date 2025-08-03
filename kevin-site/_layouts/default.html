@@ -1,41 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-    <style>
-      body {
-        background-color: #000;
-        color: #fff;
-        font-family: 'Barlow Condensed', sans-serif;
-        margin: 2rem;
-        line-height: 1.6;
-      }
-      a {
-        color: #09f;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      header, footer {
-        margin-bottom: 2rem;
-      }
-    </style>
-  </head>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <body>
-    <header>
-      <h1><a href="/">{{ site.title }}</a></h1>
-      <p>{{ site.description }}</p>
-    </header>
-    <main>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  {% seo %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </div>
+  </header>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
       {{ content }}
-    </main>
-    <footer>
-      <small>Contact me at <a href="mailto:{{ site.email }}">{{ site.email }}</a></small>
-    </footer>
-  </body>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>© 2025 Kevin O'Connor</p>
+    </div>
+  </footer>
+</body>
 </html>

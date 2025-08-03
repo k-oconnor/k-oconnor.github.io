@@ -5,13 +5,15 @@ title: Home
 
 ---
 layout: default
+title: Welcome to Kevin's World
 ---
-<header style="background: url('/assets/images/hero-bg.jpg') center/cover; padding: 50px; text-align: center; color: white;">
-  <h1>Welcome to Kevin's World</h1>
-  <p>Developer | Creator | Thinker</p>
+<header class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Kevin's World</h1>
+    <p class="subtitle">Developer | Creator | Thinker</p>
+  </div>
 </header>
 {% include brain-mind-map.html %}
----
 
 # Personal Philosophy
 
