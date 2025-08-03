@@ -1,0 +1,60 @@
+<style>
+  .brain-svg {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+  .brain-svg path {
+    stroke: #007bff; /* Blue for standout */
+    stroke-width: 2;
+    fill: none;
+    animation: pulse 2s infinite alternate; /* Subtle animation */
+  }
+  .brain-svg text {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    fill: #333;
+    cursor: pointer;
+  }
+  .brain-svg a:hover text {
+    fill: #ff4500; /* Hover color */
+  }
+  @keyframes pulse {
+    from { stroke-opacity: 0.7; }
+    to { stroke-opacity: 1; }
+  }
+</style>
+
+<svg class="brain-svg" xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 24 24">
+  <!-- Brain wireframe paths (adapted from public open-source icons) -->
+  <path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" />
+  <path d="M8.5 13a3.5 3.5 0 1 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" />
+  <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" />
+  <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" />
+  <path d="M6.5 16a3.5 3.5 0 1 0 0 -7h.5" />
+  <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" />
+  <!-- Additional folds for more wireframe detail -->
+  <path d="M12 10c-2 0-2 2-4 2s-2-2-4-2" />
+  <path d="M12 12c2 0 2-2 4-2s2 2 4 2" />
+
+  <!-- Title -->
+  <text x="12" y="5" text-anchor="middle" font-size="1.5" font-weight="bold">What is on Kevin's mind?</text>
+
+  <!-- Recent Blog Posts (left lobe) -->
+  {% assign recent_posts = site.posts | sort: 'date' | reverse | slice: 0, 3 %}
+  {% for post in recent_posts %}
+    {% assign y_pos = forloop.index | times: 2 | plus: 10 %} <!-- Position dynamically -->
+    <a href="{{ post.url | relative_url }}">
+      <text x="6" y="{{ y_pos }}">{{ post.title | truncate: 20 }}</text>
+    </a>
+  {% endfor %}
+
+  <!-- Recent Projects (right lobe) -->
+  {% assign recent_projects = site.projects | sort: 'date' | reverse | slice: 0, 3 %}
+  {% for project in recent_projects %}
+    {% assign y_pos = forloop.index | times: 2 | plus: 10 %}
+    <a href="{{ project.url | relative_url }}">
+      <text x="15" y="{{ y_pos }}">{{ project.title | truncate: 20 }}</text>
+    </a>
+  {% endfor %}
+</svg>
